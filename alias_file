@@ -1,0 +1,2 @@
+alias MYGIT="cd ~/WorkGit ; echo ; ls -ltr"
+alias mygit="MYGIT"

@@ -1,0 +1,23 @@
+#!/bin/bash -fb
+# Time-stamp: "Thu 31 Jan 2013, 11:09:25 EST by dkaelbling@blackducksoftware.com (David Kaelbling)"
+#
+# Run a git command in each nested repository.
+
+if [ -z "$1" ]; then
+    echo "Usage: `basename $0` git-cmd [ args... ]" 1>&2
+    echo "    Run the git command in each nested repository.  Set" 1>&2
+    echo "    GIT_REPO_DIR to your repository collection directory." 1>&2
+    exit 1
+fi
+
+if [ ! -d "$GIT_REPO_DIR" ] ; then GIT_REPO_DIR=. ; fi
+
+for gitDir in `find $GIT_REPO_DIR -maxdepth 2 -name .git | sort` ; do
+    repo=`dirname $gitDir`
+    ( \
+	cd $repo && \
+	echo -e "\033[1m--- `basename $repo`\033[0m: " && \
+	git ${1+"$@"} \
+    )
+    echo
+done

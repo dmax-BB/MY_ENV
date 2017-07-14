@@ -1,0 +1,19 @@
+#!/bin/bash
+function lswhich() {
+  local file_to_find
+  local found_files
+
+  file_to_find=$1
+  if [[ -z "${file_to_find}" ]]; then
+    echo "Must supply a filename to search for"
+    return 0
+  fi
+
+  found_files=$($(which find) . -name $1 2> /dev/null)
+
+  if [[ $? -eq 0 ]]; then
+    ls -ltr ${found_files}
+  else
+    echo "Nothing found"
+  fi
+}
