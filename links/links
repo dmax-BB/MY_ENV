@@ -1,0 +1,4 @@
+## Jenkins/pipeline/parallel - How to set up parallel
+ https://github.com/jenkinsci/pipeline-examples/blob/master/pipeline-examples/parallel-from-list/parallelFromList.groovy
+## Jenkins/aws/amazon - Setting up jenkins to run in AWS
+ https://aws.amazon.com/getting-started/projects/setup-jenkins-build-server/

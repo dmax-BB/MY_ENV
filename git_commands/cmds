@@ -1,0 +1,6 @@
+## Set upstream to origin
+ git push -u origin <BranchName>
+
+## Delete local branch
+ git branch -d <BranchName>
+ git branch -D <BranchName> **Force option
