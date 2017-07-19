@@ -1,4 +1,12 @@
 ## Jenkins/pipeline/parallel - How to set up parallel
  https://github.com/jenkinsci/pipeline-examples/blob/master/pipeline-examples/parallel-from-list/parallelFromList.groovy
+## Jenkins/pipeline/parallel - Great examples
+ https://www.cloudbees.com/blog/parallelism-and-distributed-builds-jenkins
 ## Jenkins/aws/amazon - Setting up jenkins to run in AWS
  https://aws.amazon.com/getting-started/projects/setup-jenkins-build-server/
+## Jenkins/cli/jenkins-cli/jar - Jenkins cli guide
+ http://www.scmgalaxy.com/tutorials/complete-guide-to-use-jenkins-cli-command-line
+## Jenkins/environment/variables - Built in jenkins environment variables
+ https://wiki.jenkins.io/display/JENKINS/Building+a+software+project
+## Jenkins/Pipeline - Jenkins pipeline best practices
+ https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin
