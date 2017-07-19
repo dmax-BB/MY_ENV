@@ -1,0 +1,13 @@
+## To pass in args that equal something. Use that value without having to shift, sed, awk.
+ while [[ $# -gt 0 ]]; do
+   myArg="$1"
+   case ${myArg} in
+     jar_file=*)
+       jarFile="${myArg#*=}"
+       ;;
+     -help|--help|help|-h|--h|*)
+       exit 0
+       ;;
+   esac
+   shift
+ done
