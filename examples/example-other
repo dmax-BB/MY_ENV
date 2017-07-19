@@ -1,0 +1,16 @@
+## Have own status/update line. Such as a counter for current loop, # success, # fails
+ curr=0
+ succ=0
+ fail=0
+ for item in ${items}; do
+   ((curr++))
+   echo -ne "${curr}\t${succ}\t${fail}\r"
+
+   <Command to Run>
+
+   [ $? -ne 0 ] && ((fail++)) || ((succ++))
+
+   echo -ne "${curr}\t${succ}\t${fail}\r"
+ done
+
+ echo -ne "\n****\n\n"

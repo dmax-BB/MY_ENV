@@ -1,0 +1,2 @@
+## Create a file in the same directory as the script being run
+ tmpFile="$(dirname ${BASH_SOURCE[0]})/tmpFile.tmp"

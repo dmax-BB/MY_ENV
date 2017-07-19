@@ -2,8 +2,8 @@
  while [[ $# -gt 0 ]]; do
    myArg="$1"
    case ${myArg} in
-     jar_file=*)
-       jarFile="${myArg#*=}"
+     example=*)
+       thisExample="${myArg#*=}"
        ;;
      -help|--help|help|-h|--h|*)
        exit 0
