@@ -20,5 +20,5 @@
 ##brew cask install netbeans
 ##brew install groovy
 ##brew install grails
-brew install gradle
-
+##brew install gradle
+##brew install git-when-merged

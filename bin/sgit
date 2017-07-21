@@ -1,0 +1,17 @@
+#! /bin/bash
+if [[ $# -ne 1 ]]; then
+  echo "Usage: `basename $0` search-token" 1>&2
+  echo "This script will search your saved git commands for a single search token"
+  exit 1
+fi
+
+baseDir=$(dirname ${BASH_SOURCE[0]})
+gitCmdDir="${baseDir}/../git_commands"
+
+if [[ ! -d "${gitCmdDir}" ]]; then
+  echo "ERROR: ${gitCmdDir} does not exist"
+  exit 1
+else
+  cd "${gitCmdDir}"
+  grep -i $1 *
+fi

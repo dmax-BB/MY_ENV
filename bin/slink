@@ -1,0 +1,17 @@
+#! /bin/bash
+if [[ $# -ne 1 ]]; then
+  echo "Usage: `basename $0` search-token" 1>&2
+  echo "This script will search your saved links for a single search token"
+  exit 1
+fi
+
+baseDir=$(dirname ${BASH_SOURCE[0]})
+linkDir="${baseDir}/../links"
+
+if [[ ! -d "${linkDir}" ]]; then
+  echo "ERROR: ${linkDir} does not exist"
+  exit 1
+else
+  cd "${linkDir}"
+  grep -i $1 *
+fi
